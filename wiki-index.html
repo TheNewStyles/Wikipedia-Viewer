@@ -3,14 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Title</title>
+    <title>Wikipedia Viewer</title>
     <link href="wiki-styles.css" rel="stylesheet" />
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="wiki-scripts.js"> </script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     
 </head>
 <body>
 
+<!-- random link -->
+<a href="https://en.wikipedia.org/wiki/Special:Random">
+  <span class="random">Click here for a random Wikipedia article</span>
+</a>
+
+<!-- wiki search bar -->
 <div class="search-wrapper">
   <div class="input-holder">
     <input type="text" class="search-input" placeholder="Type to search">
@@ -18,6 +26,9 @@
   </div> 
   <span class="close" id="close"></span>
 </div>
+
+<!-- click to search message -->
+<span class="click-to-search">Click icon to search</span>
 
 <script type="text/javascript" src="wiki-scripts.js"></script>
 </body>
