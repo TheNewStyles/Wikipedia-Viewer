@@ -1,9 +1,35 @@
 body{
-/* 	height: 100%;
-	width: 	100%; */
+	height: 100%;
+	width: 	100%;
 	background-color: #62466B;
+	font-family:;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
 }
 
+.random{
+	position: absolute;
+	transform: translate(-50%, -50%);
+    top:43%;
+    left:50%;
+    color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+.click-to-search{
+	position: absolute;
+	transform: translate(-50%, -50%);
+    top: 57%;
+    left:50%;
+    color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* Search bar css */
 .search-wrapper {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -40,7 +66,7 @@ body{
     box-sizing: border-box;
     border:none;
     outline:none;
-    font-family:"Open Sans", Arial, Verdana;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -145,4 +171,6 @@ body{
 
 @media screen and (max-width: 560px) {
      .search-wrapper.active .input-holder {width:200px;}
+     .random {top:35%;}
+     .click-to-search {top: 62%;}
 }
