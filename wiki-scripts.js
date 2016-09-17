@@ -1,25 +1,36 @@
 $(function() {
-    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=";
-    var thisUrl = "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Jimi_Hendrix&callback=?";
+    
+    var searchTerm;
+    //if click search icon search for term
+    $('#search-icon').click(function(){
+        searchTerm = $('.search-input').val().trim();
 
-    $.ajax({
-        type: "GET",
-        url: thisUrl,
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-            console.log(data);
+    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm + "&format=json&callback=?";
 
-            // TODO 
-            // Do bunch of stuff here
-        },
-        error: function (errorMessage) {
+      $.ajax({
+          type: "GET",
+          url: url,
+          contentType: "application/json; charset=utf-8",
+          async: false,
+          dataType: "json",
+          success: function (data, textStatus, jqXHR) {
+              console.log(data);
+
+              // TODO 
+              // Do bunch of stuff here
+          },
+          error: function (errorMessage) {
+          }
+      });
+
+    });//end of search-icon click
+
+    //if enter is pressed in search-input call the search-icon click function
+    $('.search-input').keypress(function(e){
+        if (e.which == 13) {
+          $('#search-icon').click();
         }
     });
-
-
-
 });
 
 
@@ -38,13 +49,16 @@ function searchToggle(obj, evt){
 }
 
 // Event listeners
-var el = document.getElementById("search-icon");
-var el1 = document.getElementById("close");
+var searchIconEl = document.getElementById("search-icon");
+var closeSearchEl = document.getElementById("close");
 
-el.addEventListener("click", function(e){
-    searchToggle(this,e);
-});
+if(searchIconEl && closeSearchEl){
+   searchIconEl.addEventListener("click", function(e){
+      searchToggle(this,e);
+  });
 
-el1.addEventListener("click", function(e){
-    searchToggle(this,e);
-});
+   closeSearchEl.addEventListener("click", function(e){
+       searchToggle(this,e);
+   });
+}
+
