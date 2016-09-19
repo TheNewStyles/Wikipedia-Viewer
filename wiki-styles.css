@@ -16,6 +16,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	text-align: center;
+	line-height: 1.1em;
 }
 
 .click-to-search{
@@ -173,4 +174,28 @@ body{
      .search-wrapper.active .input-holder {width:200px;}
      .random {top:35%;}
      .click-to-search {top: 62%;}
+}
+
+ul div {
+	margin-bottom: 1em;
+}
+
+i {
+	color: #b5c2b7;
+}
+
+#results{
+	margin-top: 5em;
+	padding-left: 0px;
+}
+
+.mdl-card {
+	width: 80% !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.move-search-section {
+	transform: translate(0%, 50%);
+    height: 5em;
 }
