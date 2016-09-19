@@ -4,31 +4,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Wikipedia Viewer</title>
+    <!-- Custom CSS -->
     <link href="wiki-styles.css" rel="stylesheet" />
-    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <!-- Custom JS -->
     <script src="wiki-scripts.js"> </script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
 
     
 </head>
 <body>
 
-<!-- random link -->
-<a href="https://en.wikipedia.org/wiki/Special:Random">
-  <span class="random">Click here for a random Wikipedia article</span>
-</a>
+<div id="search-section">
+   <!-- random link -->
+   <a id="random-wiki" href="https://en.wikipedia.org/wiki/Special:Random">
+     <span class="random">Click here for a random Wikipedia article</span>
+   </a>
 
-<!-- wiki search bar -->
-<div class="search-wrapper">
-  <div class="input-holder">
-    <input type="text" class="search-input" placeholder="Type to search">
-    <button class="search-icon" id="search-icon"><span></span> </button> 
-  </div> 
-  <span class="close" id="close"></span>
+   <!-- wiki search bar -->
+   <div class="search-wrapper">
+     <div class="input-holder">
+       <input type="text" class="search-input" placeholder="Type to search">
+       <button class="search-icon" id="search-icon"><span></span> </button> 
+     </div> 
+     <span class="close" id="close"></span>
+   </div>
+
+   <!-- click to search message -->
+   <span id="click-to-search" class="click-to-search">Click icon to search</span>
 </div>
 
-<!-- click to search message -->
-<span class="click-to-search">Click icon to search</span>
+<ul id="results"></ul>
+
 
 <script type="text/javascript" src="wiki-scripts.js"></script>
 </body>
