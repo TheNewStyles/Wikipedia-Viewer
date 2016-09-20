@@ -12,16 +12,28 @@
     <script src="wiki-scripts.js"> </script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
-
-
-   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     
 </head>
+
+<!-- Nav Menu   -->
+    <div class="fixed-nav-bar">    
+      <span id="hamburger" class="fa fa-bars fa-3x col-md-1 col-md-offset-11 col-xs-3 col-xs-offset-9" onclick="openNav()"></span>  
+      <nav id="nav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html" onclick="closeNav()">Home</a>
+          <a href="index.html#contact" onclick="closeNav()">Contact</a>
+          <a href="index.html#portfolio" onclick="closeNav()">Portfolio</a>
+          <a href="projects/resume/resume.html" onclick="closeNav()">Resume</a>
+        </div>
+      </nav>
+    </div>
+<!-- End of Nav -->
+
+
 <body>
 
 <div id="search-section">
