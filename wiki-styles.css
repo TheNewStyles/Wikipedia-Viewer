@@ -185,7 +185,7 @@ i {
 }
 
 #results{
-	margin-top: 5em;
+	margin-top: 15em;
 	padding-left: 0px;
 }
 
@@ -193,11 +193,6 @@ i {
 	width: 80% !important;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.move-search-section {
-	transform: translate(0%, 50%);
-    height: 5em;
 }
 
 
