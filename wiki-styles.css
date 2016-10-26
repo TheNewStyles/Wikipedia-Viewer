@@ -172,8 +172,12 @@ body{
 
 @media screen and (max-width: 560px) {
      .search-wrapper.active .input-holder {width:200px;}
-     .random {top:35%;}
-     .click-to-search {top: 62%;}
+     .random {
+        top:35%;
+        transform: translate(-50%, -70%)
+      }
+
+     .click-to-search {top: 68%;}
 }
 
 ul div {
@@ -193,6 +197,11 @@ i {
 	width: 80% !important;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.move-search-section {
+	transform: translate(0%, 50%);
+  height: 5em;
 }
 
 
