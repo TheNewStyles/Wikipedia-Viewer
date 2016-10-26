@@ -48,7 +48,7 @@ $(function() {
                       displayCard += '</div>';                       
                      
                       //hide random and message
-                      // $('#search-section').addClass('move-search-section');
+                      $('#search-section').addClass('move-search-section');
                       $('#random-wiki').hide();
                       $('#click-to-search').hide();                      
                       //
