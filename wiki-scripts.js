@@ -6,6 +6,11 @@ $(function() {
         searchTerm = $('.search-input').val().trim();        
 
    if(searchTerm !== undefined && searchTerm !== ""){
+        // animate search bar up after search
+        var $searchWrapper = $('.search-wrapper');       
+        
+        $searchWrapper.animate({top: "150px"}, 300);
+        
 
         var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm + "&format=json&callback=?";
 
@@ -16,10 +21,10 @@ $(function() {
               async: false,
               dataType: "json",
               success: function (data, textStatus, jqXHR) {
-                  console.log(data);    
-                  console.log(data[1][0]);//shows main title
-                  console.log(data[2]);//shows description
-
+                  // console.log(data);    
+                  // console.log(data[1][0]);//shows main title
+                  // console.log(data[2]);//shows description
+                   
 
                   var displayCard = '';
 
@@ -40,13 +45,14 @@ $(function() {
                       displayCard += 'Learn More';
                       displayCard += '</a>';
                       displayCard += '</div>';
-                      displayCard += '</div>';                     
-
-                      $('#search-section').addClass('move-search-section');
+                      displayCard += '</div>';                       
+                     
+                      //hide random and message
+                      // $('#search-section').addClass('move-search-section');
                       $('#random-wiki').hide();
-                      $('#click-to-search').hide();
-
-                      document.getElementById('results').innerHTML = displayCard;                      
+                      $('#click-to-search').hide();                      
+                      //
+                      $('#results').append(displayCard).fadeIn(2500);                      
                   }
 
    
