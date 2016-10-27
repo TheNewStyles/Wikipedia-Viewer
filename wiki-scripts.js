@@ -20,16 +20,13 @@ $(function() {
               contentType: "application/json; charset=utf-8",
               async: false,
               dataType: "json",
-              success: function (data, textStatus, jqXHR) {
-                  // console.log(data);    
-                  // console.log(data[1][0]);//shows main title
-                  // console.log(data[2]);//shows description
-                   
+              success: function (data, textStatus, jqXHR) {                     
 
                   var displayCard = '';
 
                   for(var i=0; i<=data[1].length-1; i++){
-                      displayCard += '<div class="demo-card-wide mdl-card mdl-shadow--2dp">';
+                      displayCard += '<div id="display'+ i + '" class="demo-card-wide mdl-card mdl-shadow--2dp">';
+                      //id="display'+ i + '"
                       displayCard += '<div class="mdl-card__title">';
                       displayCard += '<h2 class="mdl-card__title-text">';
                       displayCard += data[1][i];
@@ -52,9 +49,9 @@ $(function() {
                       $('#random-wiki').hide();
                       $('#click-to-search').hide();                      
                       //
-                      $('#results').append(displayCard).fadeIn(2500);                      
+                      //$('#results').append(displayCard); 
+                      document.getElementById('results').innerHTML = displayCard;                            
                   }
-
    
               },
               error: function (errorMessage) {
