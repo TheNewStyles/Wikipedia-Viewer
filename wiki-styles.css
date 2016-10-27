@@ -1,6 +1,7 @@
-body{
-	height: 100%;
-	width: 	100%;
+html{
+  max-height: 100vh;
+}
+body{	
 	background-color: #62466B;
 	font-family:;
 	color: white;
@@ -10,19 +11,20 @@ body{
 .random{
 	position: absolute;
 	transform: translate(-50%, -50%);
-    top:43%;
+    top:35%;
     left:50%;
     color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	text-align: center;
 	line-height: 1.1em;
+  margin-top: 1em;
 }
 
 .click-to-search{
 	position: absolute;
 	transform: translate(-50%, -50%);
-    top: 57%;
+    top: 65%;
     left:50%;
     color: white;
 	font-family: 'Open Sans', sans-serif;
@@ -35,8 +37,8 @@ body{
     position: absolute;
     transform: translate(-50%, -50%);
     top:50%;
-    left:50%;
-}
+    left:50%;    
+
 .search-wrapper.active {}
 
 .search-wrapper .input-holder {    
@@ -171,13 +173,10 @@ body{
 
 
 @media screen and (max-width: 560px) {
+     .search-wrapper {top:60%;}
      .search-wrapper.active .input-holder {width:200px;}
-     .random {
-        top:35%;
-        transform: translate(-50%, -70%)
-      }
-
-     .click-to-search {top: 68%;}
+     .random {top:25%;}
+     .click-to-search {top: 85%;}
 }
 
 ul div {
@@ -188,9 +187,8 @@ i {
 	color: #b5c2b7;
 }
 
-#results{
-	margin-top: 15em;
-	padding-left: 0px;
+#display0 {
+  margin-top: 12em;
 }
 
 .mdl-card {
