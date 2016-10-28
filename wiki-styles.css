@@ -243,6 +243,8 @@ i {
   color: #e7ecef;
   display: block;
   transition: 0.3s;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -261,7 +263,8 @@ i {
   margin-top: 5px;  
   margin-bottom: 1em;
   z-index: 5;  
-
+  float: right;
+  margin-right: 10px;
 }
 
 #hamburger:hover {
