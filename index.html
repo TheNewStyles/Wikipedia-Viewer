@@ -16,47 +16,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<!-- Nav Menu   -->
-    <div class="fixed-nav-bar">    
-      <span id="hamburger" class="fa fa-bars fa-3x col-md-1 col-md-offset-11 col-xs-3 col-xs-offset-9" onclick="openNav()"></span>  
-      <nav id="nav" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="http://thenewstyles.github.io/portfolio/index.html" onclick="closeNav()">Home</a>
-          <a href="http://thenewstyles.github.io/portfolio/index.html#contact" onclick="closeNav()">Contact</a>
-          <a href="http://thenewstyles.github.io/portfolio/index.html#portfolio" onclick="closeNav()">Portfolio</a>
+    <body>
+        <div id="search-section">
+           <!-- random link -->
+           <a id="random-wiki" href="https://en.wikipedia.org/wiki/Special:Random">
+             <span class="random">Click here for a random Wikipedia article</span>
+           </a>
+           <!-- wiki search bar -->
+           <div class="search-wrapper">
+             <div class="input-holder">
+               <input type="text" class="search-input" placeholder="Type to search">
+               <button class="search-icon" id="search-icon"><span></span> </button>
+             </div>
+             <span class="close" id="close"></span>
+           </div>
+           <!-- click to search message -->
+           <span id="click-to-search" class="click-to-search">Click icon to search</span>
         </div>
-      </nav>
-    </div>
-<!-- End of Nav -->
 
+        <ul id="results"></ul>
 
-<body>
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+      <script src="main.js"> </script>
 
-<div id="search-section">
-   <!-- random link -->
-   <a id="random-wiki" href="https://en.wikipedia.org/wiki/Special:Random">
-     <span class="random">Click here for a random Wikipedia article</span>
-   </a>
-
-   <!-- wiki search bar -->
-   <div class="search-wrapper">
-     <div class="input-holder">
-       <input type="text" class="search-input" placeholder="Type to search">
-       <button class="search-icon" id="search-icon"><span></span> </button> 
-     </div> 
-     <span class="close" id="close"></span>
-   </div>
-
-   <!-- click to search message -->
-   <span id="click-to-search" class="click-to-search">Click icon to search</span>
-</div>
-
-<ul id="results"></ul>
-
-  <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-  <!-- Custom JS -->
-  <script src="wiki-scripts.js"> </script>
-</body>
+    </body>
 </html>
