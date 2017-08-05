@@ -17,35 +17,50 @@ $(function() {
                   contentType: "application/json; charset=utf-8",
                   async: false,
                   dataType: "json",
-                  success: function (data, textStatus, jqXHR) {
+                  success: function (data) {
 
                       var displayCard = '';
 
                       for(var i=0; i<=data[1].length-1; i++){
-                          displayCard += '<div id="display'+ i + '" class="demo-card-wide mdl-card mdl-shadow--2dp">';
-                          displayCard += '<div class="mdl-card__title">';
-                          displayCard += '<h2 class="mdl-card__title-text">';
-                          displayCard += data[1][i];
-                          displayCard += '</h2>';
-                          displayCard += '</div>';
-                          displayCard += '<div class="mdl-card__supporting-text">';
-                          displayCard += data[2][i];
-                          displayCard += '</div>';
-                          displayCard += '<div class="mdl-card__actions mdl-card--border">';
-                          displayCard += '<a href="';
-                          displayCard += data[3][i];
-                          displayCard += '" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank">';
-                          displayCard += 'Learn More';
-                          displayCard += '</a>';
-                          displayCard += '</div>';
-                          displayCard += '</div>';
+                          // displayCard += '<div id="display'+ i + '" class="demo-card-wide mdl-card mdl-shadow--2dp">';
+                          // displayCard += '<div class="mdl-card__title">';
+                          // displayCard += '<h2 class="mdl-card__title-text">';
+                          // displayCard += data[1][i];
+                          // displayCard += '</h2>';
+                          // displayCard += '</div>';
+                          // displayCard += '<div class="mdl-card__supporting-text">';
+                          // displayCard += data[2][i];
+                          // displayCard += '</div>';
+                          // displayCard += '<div class="mdl-card__actions mdl-card--border">';
+                          // displayCard += '<a href="';
+                          // displayCard += data[3][i];
+                          // displayCard += '" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank">';
+                          // displayCard += 'Learn More';
+                          // displayCard += '</a>';
+                          // displayCard += '</div>';
+                          // displayCard += '</div>';
+
+                          let dataInfo = {
+                              name: data[1][i],
+                              description: data[2][i],
+                              url: data[3][i]
+                          };
+
+                          var test = get_user_widget_markup(i, dataInfo);
+
+                          function get_user_widget_markup (iterator, dataInfo) {
+                              return `<div id="display${iterator}" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                                     
+                                        `
+                          }
+
+
 
                           //hide random and message
                           $('#search-section').addClass('move-search-section');
                           $('#random-wiki').hide();
                           $('#click-to-search').hide();
-                          //
-                          //$('#results').append(displayCard);
+
                           document.getElementById('results').innerHTML = displayCard;
                       }
 
